@@ -75,7 +75,7 @@ function App() {
       /> */}
       <Slider
         max={50}
-        label="Radius"
+        label="Radius"  
         value={radius}
         onValueChange={(v) => setRadius(v)}
       />
