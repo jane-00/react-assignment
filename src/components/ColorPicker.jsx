@@ -1,4 +1,5 @@
 const ColorPicker = ({ onValueChange, value, color, label }) => {
+  
   return (
     <label>
       <span>{label}</span>
@@ -6,7 +7,7 @@ const ColorPicker = ({ onValueChange, value, color, label }) => {
         type="color"
         name="favcolor"
         value={color}
-        onChange={(e) => onValueChange(parseInt(e.target.value, 10))}
+        onChange={(e) => onValueChange(e.target.value)}
       />
       <span>{value}</span>
     </label>

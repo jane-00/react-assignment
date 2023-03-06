@@ -13,7 +13,7 @@ function App() {
   const [favNum, setfavNum] = useState(1);
   const [dur, setDur] = useState(10);
 
-  const [colorPicker, setcolorPicker] = useState("yellow");
+  const [colorPicker, setColorPicker] = useState("#FFFFFF");
 
   // //creating state to store our color and also set color using onChange event for sketch picker
   // const [sketchPickerColor, setSketchPickerColor] = useState({
@@ -28,9 +28,9 @@ function App() {
   // //creating state to store our color and also set color using onChange event for block picker
   // const [blockPickerColor, setBlockPickerColor] = useState("#37d67a");
 
-  const [red, setRed] = useState(Math.floor(Math.random() * 256));
-  const [green, setGreen] = useState(Math.floor(Math.random() * 256));
-  const [blue, setBlue] = useState(Math.floor(Math.random() * 256));
+  // const [red, setRed] = useState(Math.floor(Math.random() * 256));
+  // const [green, setGreen] = useState(Math.floor(Math.random() * 256));
+  // const [blue, setBlue] = useState(Math.floor(Math.random() * 256));
 
   return (
     <div className="App">
@@ -46,9 +46,15 @@ function App() {
       <ColorPicker
         label="Pick color scheme"
         value={colorPicker}
-        onValueChange={(color) => setcolorPicker(color.rgb)}
+        onValueChange={(color) => {
+          setColorPicker(color);
+          console.log(colorPicker)
+        }
+        }
+
       />
 
+      {/* 
       <Slider
         max={255}
         label="Red"
@@ -66,7 +72,7 @@ function App() {
         label="Blue"
         value={blue}
         onValueChange={(v) => setBlue(v)}
-      />
+      /> */}
       <Slider
         max={50}
         label="Radius"
@@ -86,7 +92,7 @@ function App() {
         value={dur}
         onValueChange={(d) => setDur(d)}
       />
-      <Drawing dur={dur} favNum={favNum} radius={radius} color={{ red, green, blue }} />
+      <Drawing dur={dur} favNum={favNum} radius={radius} color={colorPicker} />
 
 
 
