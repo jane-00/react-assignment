@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { SketchPicker } from "react-color";
+//import { SketchPicker } from "react-color";
 import reactLogo from "./assets/react.svg";
 import "./App.css";
 import Slider from "./components/Slider";
@@ -13,19 +13,20 @@ function App() {
   const [favNum, setfavNum] = useState(1);
   const [dur, setDur] = useState(10);
 
+  const [colorPicker, setcolorPicker] = useState("yellow");
 
-  //creating state to store our color and also set color using onChange event for sketch picker
-  const [sketchPickerColor, setSketchPickerColor] = useState({
-    r: "241",
-    g: "112",
-    b: "19",
-   
-  });
-  // destructuring rgba from state
-  const { r, g, b } = sketchPickerColor;
+  // //creating state to store our color and also set color using onChange event for sketch picker
+  // const [sketchPickerColor, setSketchPickerColor] = useState({
+  //   r: "241",
+  //   g: "112",
+  //   b: "19",
 
-  //creating state to store our color and also set color using onChange event for block picker
-  const [blockPickerColor, setBlockPickerColor] = useState("#37d67a");
+  // });
+  // // destructuring rgba from state
+  // const { r, g, b } = sketchPickerColor;
+
+  // //creating state to store our color and also set color using onChange event for block picker
+  // const [blockPickerColor, setBlockPickerColor] = useState("#37d67a");
 
   const [red, setRed] = useState(Math.floor(Math.random() * 256));
   const [green, setGreen] = useState(Math.floor(Math.random() * 256));
@@ -34,19 +35,19 @@ function App() {
   return (
     <div className="App">
 
-      <SketchPicker
+      {/* <SketchPicker
       
         onChange={(color) => {setSketchPickerColor(color.rgb)}}
         color={sketchPickerColor}
-      />
-      
-      {console.log(sketchPickerColor)
-      
-      /* <ColorPicker
-        label="Pick color scheme"
-        value={pickerColor}
-        onValueChange={(color) => setPickerColor(color.rgb)}
       /> */}
+
+
+
+      <ColorPicker
+        label="Pick color scheme"
+        value={colorPicker}
+        onValueChange={(color) => setcolorPicker(color.rgb)}
+      />
 
       <Slider
         max={255}
@@ -85,7 +86,7 @@ function App() {
         value={dur}
         onValueChange={(d) => setDur(d)}
       />
-      <Drawing dur={dur} favNum={favNum} radius={radius} color={[sketchPickerColor.r, sketchPickerColor.g, sketchPickerColor.b ]} />
+      <Drawing dur={dur} favNum={favNum} radius={radius} color={{ red, green, blue }} />
 
 
 
