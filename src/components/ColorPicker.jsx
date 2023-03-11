@@ -9,7 +9,7 @@ const ColorPicker = ({ onValueChange, value, color, label }) => {
         value={color}
         onChange={(e) => onValueChange(e.target.value)}
       />
-      <span>{value}</span>
+     
     </label>
   );
 };
