@@ -12,7 +12,6 @@ function App() {
   const [radius, setRadius] = useState(15);
   const [favNum, setfavNum] = useState(1);
   const [dur, setDur] = useState(10);
-
   const [colorPicker, setColorPicker] = useState("#19cad7");
 
   return (
@@ -21,7 +20,10 @@ function App() {
 
       <div className="Main__generator">
 
-        <Drawing dur={dur} favNum={favNum} radius={radius} color={colorPicker} />
+        <div className="svg__container">
+
+          <Drawing dur={dur} favNum={favNum} radius={radius} color={colorPicker} />
+        </div>
 
         <div className="Controlers">
           <ColorPicker
@@ -34,7 +36,6 @@ function App() {
             }
           />
 
-         
           <NumberInput
             min={0}
             max={100} // this still lets you enter more than 50
@@ -49,6 +50,9 @@ function App() {
             value={dur}
             onValueChange={(d) => setDur(d)}
           />
+
+        
+          
         </div>
       </div>
 
