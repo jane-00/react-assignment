@@ -53,7 +53,7 @@ const Drawing = ({ color, favNum, dur }) => {
 
   let hlsColor = hexToHSL(color)
 
-  let h = hlsColor[0];
+  let h = hlsColor[0]; 
   let s = hlsColor[1];
   let l = hlsColor[2];
 
