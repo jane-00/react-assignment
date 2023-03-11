@@ -19,16 +19,13 @@
 
   </div>
   <div class="main__generator">
-
     <div id="root"></div>
-    
   </div>
-<button class="download__button" onclick="downloadSVG()">Download your SVG</button>
+  <button class="download__button" onclick="downloadSVG()">Download your SVG</button>
 
   <script type="module" src="/src/main.jsx"></script>
   <script>
-
-    function downloadSVG() {
+    const downloadSVG = () => {
       const svg = document.querySelector(`.svg__container`).innerHTML;
       const blob = new Blob([svg.toString()]);
       const element = document.createElement("a");
@@ -37,7 +34,6 @@
       element.click();
       element.remove();
     }
-
   </script>
 </body>
 

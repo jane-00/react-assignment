@@ -26,7 +26,6 @@ a:hover {
 }
 
 body {
-
   margin: 0;
   margin-top: 3rem;
   display: flex;
@@ -42,8 +41,6 @@ h1 {
   line-height: 1.1;
   min-width: 30vw;
 }
-
-
 
 button {
   color: #FBEDD3;
@@ -93,8 +90,6 @@ button:focus-visible {
   padding-bottom: 13rem;
 }
 
-
-
 .Controlers {
   margin-top: -8rem;
   padding-top: 3rem;
@@ -104,7 +99,6 @@ button:focus-visible {
   border: 1px #FBEDD3 solid;
   border-radius: 20px;
   padding: 1rem;
-
 }
 
 .Sunshape {
@@ -113,24 +107,5 @@ button:focus-visible {
 }
 
 .download__button {
-  
-  
-  
-}
-
-
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-
-  a:hover {
-    color: #747bff;
-  }
-
-  button {
-    background-color: #f9f9f9;
-  }
+  margin-top:-3rem  
 }
