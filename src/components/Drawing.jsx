@@ -67,7 +67,7 @@ const Drawing = ({ color, favNum, dur }) => {
 
     return (
 
-      <svg width="199" height="188" viewBox="0 0 199 188" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg width="169" height="158" viewBox="-5 0 209 188" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path className="sun__line"
           d="M97.3001 128.334C72.5965 135.051 72.6091 171.945 68.3212 172.175C55.9845 148.322 75.0189 125.238 86.5263 122.17C98.0337 119.101 111.565 107.957 114.29 90.0382C117.015 72.1193 148.376 61.2447 165.55 49.2923C179.29 39.7303 183.571 22.5859 183.995 15.2089C185.337 13.5026 187.438 15.2694 185.109 35.9863C182.198 61.8824 150.771 71.5348 136.66 83.323C122.548 95.1111 128.18 119.936 97.3001 128.334Z"
           fill={`hsl(${h},${s + 5}%,${l - 30}%)`} />
@@ -104,7 +104,7 @@ const Drawing = ({ color, favNum, dur }) => {
     return (
 
 
-      <svg width="199" height="188" viewBox="0 0 199 188" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg width="169" height="158" viewBox="-10 -10 219 218" fill="none" xmlns="http://www.w3.org/2000/svg">
 
 
 
@@ -140,7 +140,7 @@ const Drawing = ({ color, favNum, dur }) => {
 
     return (
 
-      <svg width="199" height="188" viewBox="0 0 199 188" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg width="169" height="158" viewBox="-25 -10 239 198" fill="none" xmlns="http://www.w3.org/2000/svg">
 
         <g fill="none">
 
